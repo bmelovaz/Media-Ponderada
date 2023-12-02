@@ -4,7 +4,6 @@ const readline = require('readline')
 function statusAluno(media){
     if(media >= 5){
         console.log('Aluno Aprovado')
-s
     } 
 
     if(media < 5){
