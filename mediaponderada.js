@@ -1,17 +1,17 @@
 const { Console } = require('console')
 const readline = require('readline')
 
-function statusAluno(media){
-    if(media >= 5){
+function statusAluno(media) {
+    if (media >= 5) {
         console.log('Aluno Aprovado')
-    } 
-
-    if(media < 5){
+    }
+    
+    if (media < 5) {
         console.log('Aluno reprovado')
     }
 }
 
-function mediaPonderada(){
+function mediaPonderada() {
     const rl = readline.createInterface({
         input: process.stdin,
         output: process.stdout
@@ -30,10 +30,10 @@ function mediaPonderada(){
                     const valorN2 = parseFloat(N2)
                     const valorN3 = parseFloat(N3)
 
-                    if(!isNaN(valorN1) && !isNaN(valorN2) && !isNaN(valorN3)) {
+                    if (!isNaN(valorN1) && !isNaN(valorN2) && !isNaN(valorN3)) {
 
                         const calculo = (valorN1 * pesoN1 + valorN2 * pesoN2 + valorN1 * pesoN3) / (pesoN1 + pesoN2 + pesoN3)
-                        
+
                         console.log('Sua média é: ', calculo)
 
                         statusAluno(calculo)
@@ -51,5 +51,4 @@ function mediaPonderada(){
 mediaPonderada()
 
 
-    
-    
+
